@@ -1,0 +1,3 @@
+[submodule "fusion-setup-configuration-registry"]
+	path = fusion-setup-configuration-registry
+	url = https://github.com/oracle/fusion-setup-configuration-registry.git
