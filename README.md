@@ -1,17 +1,39 @@
+### ⚠️ Important Update: Repository Structure and Release Branching
+
+The repository has been **restructured to simplify cloning, pulling updates, and consuming AI Studio and AI Apps skills**. Previously, users had to manually download, extract, and organize the **AI Studio Skills** and **AI Apps Skills** ZIP files. With the new structure, skills,  oracle authored template applications and workflows are organized directly within the repository, eliminating these additional steps.
+
+##### Release Branches
+
+The repository now follows a **release-based branching model**. You will see **`release-26C`** as the current release branch. As new releases become available, a dedicated branch will be created for each release (for example, `release-27A`, `release-27B`, etc.).
+
+##### What This Means for Users
+
+* Use standard **`git clone`** and **`git pull`** operations to access and update AI Studio skills and AI Studio Apps skills.
+* Select the **release branch** corresponding to the product release you are using.
+* Access AI Studio skill and oracle authored template applications and workflows directly from the **`aiapps`** folder without the previous manual extraction and organization steps.
+
+> **Important:** If you have a local copy based on the previous repository structure, please review the new structure before pulling the latest changes. **Local artifacts created in the `src` folder will not be impacted.**
+
+
 ### Change Log Summary
 
 | **Date**| **Operation** | **File/folder** | **Description**|
 |--------------|---------------|---------------|---------------|
-| 2026-08-12| Added |`release-26C/aiapps/scm/inventory` |Added inventory workflows, business objects for item shortage and lot expiry.|
-| 2026-08-12| Added |`release-26C/aiapps/prc/purchasing` |Added workflows, business objects in PRC family related to purchase orders and purchase agreements.|
-| 2026-08-12| Updated |`release-26C/aiapps/scm/cost-management` |Updated workflows, business objects in cost-management to handle no data scenarios.|
-| 2026-08-06| Updated |`release-26C/aistudio/bin/aistudio-skill.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
-| 2026-08-06| Updated |`release-26C/aistudio/bin/aistudio-extension.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
-| 2026-07-25| Updated |`release-26C/aistudio/bin/aistudio-skill.zip` |Updated to resolve authentication issues when connecting to the Fusion environment on the Windows platform|
-| 2026-07-25| Updated |`release-26C/aistudio/bin/aistudio-extension.zip` |Updated to resolve authentication issues when connecting to the Fusion environment on the Windows platform|
-| 2026-07-25| Added |`release-26C/aiapps/hcm/career-development` | Added career development workflows and business objects|
-| 2026-07-25| Updated |`release-26C/aiapps/hcm/human-resources` | Updated the descriptions and business object code reference in `xx_worker_card.wf`|
-| 2026-07-25| Updated |`release-26C/aiapps/hcm/absences` | Updated the descriptions and workflow `xx_team_upcoming_absences.wf`|
+| 2026-11-13| Added |`aiapps/hcm/human-resources` | Added new business objects and workflows to the human resources area|
+| 2026-11-13| Added |`aiapps/hcm/talent-management` | Added new business objects and workflows to the talent management area|
+| 2026-11-13| Added |`aiapps/hcm/succession-management` | Added new function to business object in the succession management area|
+| 2026-10-26| Added |`aiapps/hcm/human-resources` | Added new business objects, workflows to human resources and updated widget output formats of workflows|
+| 2026-08-21| Added |`.agents/skills, aiapps` |Directory restructured to support standard `**git clone**` and `**git pull**` operations to obtain the latest skills, applications, and workflow updates.|
+| 2026-08-12| Added |`aiapps/scm/inventory` |Added inventory workflows, business objects for item shortage and lot expiry.|
+| 2026-08-12| Added |`aiapps/prc/purchasing` |Added workflows, business objects in PRC family related to purchase orders and purchase agreements.|
+| 2026-08-12| Updated |`aiapps/scm/cost-management` |Updated workflows, business objects in cost-management to handle no data scenarios.|
+| 2026-08-06| Updated |`aistudio-skill.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
+| 2026-08-06| Updated |`aistudio-extension.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
+| 2026-07-25| Updated |`aistudio-skill.zip` |Updated to resolve authentication issues when connecting to the Fusion environment on the Windows platform|
+| 2026-07-25| Updated |`aistudio-extension.zip` |Updated to resolve authentication issues when connecting to the Fusion environment on the Windows platform|
+| 2026-07-25| Added |`aiapps/hcm/career-development` | Added career development workflows and business objects|
+| 2026-07-25| Updated |`aiapps/hcm/human-resources` | Updated the descriptions and business object code reference in `xx_worker_card.wf`|
+| 2026-07-25| Updated |`aiapps/hcm/absences` | Updated the descriptions and workflow `xx_team_upcoming_absences.wf`|
 ---------------
 
 # Oracle Fusion AI Agent Studio Sample Apps and Workflows
@@ -87,11 +109,11 @@ Fusion AI Studio provides the tools for building the AI Studio Agentic apps and 
 
 Codex can also be used as an optional assistant when a task involves several related changes or when users want help creating, reviewing, or updating artifacts. Instead of manually changing each file one by one, users can describe the intended business outcome and ask Codex to help apply the change across the relevant local files. This can be useful when creating an app that depends on workflows, business objects, agents, or other supporting artifacts.
 
-You may need to refer to `install-and-use-fusion-ai-studio-CLI_vscode-codex.md` in the  `<release>/how-to` folder for more detail. The guide focuses on the practical steps needed to get started. It explains how to install the required tools, open a workspace, configure access, create or fetch artifacts, and understand the main approaches available for building AI Studio apps and workflows. 
+You may need to refer to `install-and-use-fusion-ai-studio-CLI_vscode-codex.md` in the  `how-to` folder for more detail. The guide focuses on the practical steps needed to get started. It explains how to install the required tools, open a workspace, configure access, create or fetch artifacts, and understand the main approaches available for building AI Studio apps and workflows. 
 
 ### How to Uptake Incremental Updates for Fusion AI Studio Skills and Samples in Existing Fusion AI Apps Workspaces?
 
-Instructions for upgrading existing Fusion Agentic Apps workspaces with the latest skill versions and sample apps and workflows are available in the `how-to-uptake-incremental-updates` guide, located in the `<release>/how-to` folder.
+Instructions for upgrading existing Fusion Agentic Apps workspaces with the latest skill versions and sample apps and workflows are available in the `how-to-uptake-incremental-updates` guide, located in the `how-to` folder.
 
 
 ## Fusion AI Studio Artifacts
@@ -121,29 +143,82 @@ You can find the online documentation for Oracle Fusion AI Agent Studio at [offi
 
 ### Change Log Details
 
+##### 13th November 2026
+-----
+Added workflows, business objects in HCM family related to human resources in folder `aiapps/hcm/human-resources`
+
+- Workflows : Direct Report Details, Worker Addresses, Worker Citizenships, Worker Driver Licenses, Worker Email Addresses, Worker Passports, Worker Phone Numbers, Worker Visas and Permits, Worker Family and Emergency Contacts, Worker Employment History, Worker Organization Search, Worker Other Communication Accounts
+- Business Objects : Job Profile Requirements, Worker Addresses, Worker Citizenships, Worker Driver Licenses, Worker Family and Emergency Contacts, Worker Passports, Worker Phones, Worker Visas and Permits, Fetch Logged In User Info, Fetch Active Job Details
+
+Added workflows, business objects in HCM family related to talent management in folder `aiapps/hcm/talent-management`
+
+- Workflows : Team Highest and Lowest Achieved Skills, Team Skill Details, Team Skill Overview, Team Skills Summary, Worker Current and Future Role Skills Gap, Worker Skills Details, Worker Skills Summary
+- Business Objects : Person Skill Details Search, Team Skill Search, Team Skill Details, Person Talent Profile V2
+
+Added a new function GetAdvancementReadinessByTalentProfileId to business object Talent Ratings Lookup in `aiapps/hcm/succession-management`. This helps in retrieving advancement-readiness information for a given talent profile ID.
+
+
+
+##### 26th October 2026
+-----
+Added workflows, business objects in HCM family related to human resources in folder `aiapps/hcm/human-resources`
+
+- Workflows : Worker Achievements, Worker Favourite Links, Worker Feedback
+- Business Objects : Person Direct Reports, Person Headers Data Object Access, Representatives Search, Person Feedback Notes, Person Notes Visibility Options, Person Notes, Person Talent Profile
+
+Updated descriptions, business object code references, widget output formats in below workflows
+-  `aiapps/hcm/human-resources/xx_worker_aboutme.wf` 
+-  `aiapps/hcm/human-resources/xx_worker_card.wf`
+-  `aiapps/hcm/human-resources/xx_worker_directs.wf`
+-  `aiapps/hcm/human-resources/xx_worker_reps.wf`
+-  `aiapps/hcm/human-resources/xx_worker_wrk_loc_weather.wf`
+
+##### 21th Aug 2026
+-----
+The repository has been **restructured to simplify cloning, pulling updates, and consuming AI Studio and AI Apps skills**. Previously, users had to manually download, extract, and organize the **AI Studio Skills** and **AI Apps Skills** ZIP files. With the new structure, skills,  oracle authored template applications and workflows are organized directly within the repository, eliminating these additional steps.
+
+###### What Changed?
+
+Previously, users had to perform additional manual steps after downloading or cloning the repository, including extracting and organizing the AI Studio Skills and AI Apps Skills ZIP files into the required directory structure.To eliminate these manual steps, the repository has now been restructured so that the required oracle authored skills and sample applications, and workflows are available directly in their expected locations.
+
+In addition, the repository now follows a release-based branching model.
+
+###### Release Branches
+
+You will now see release-26C as the current release branch. Going forward, as additional releases become available, a dedicated branch will be created for each release (for example, release-27A, release-27B, and so on).
+
+This approach makes it easier to:
+- Identify the repository content associated with a specific product release.
+- Pull updates for the release you are currently using.
+- Maintain a clear separation between different release versions.
+
+###### Why Was This Change Made?
+
+The primary goal of this restructuring is to provide a simpler, more consistent, and maintainable repository experience. Users can now clone the appropriate release branch once and subsequently use git pull to receive updates, without repeatedly downloading ZIP files, extracting their contents, and manually placing files into the required directories.
+
 ##### 12th Aug 2026
 -----
-Added inventory workflows, business objects for item shortage and lot expiry in folder `release-26C/aiapps/scm/inventory` 
+Added inventory workflows, business objects for item shortage and lot expiry in folder `aiapps/scm/inventory` 
 
 - Workflows : Inventory Item Shortage Monitor, Inventory Item Stockout Monitor Workflows
 - Business Objects : Expiring Inventory Lots, Items Awaiting Inspection, Item Stockout Subinventory Locations, Transfer Lots to Subinventory
 
-Added workflows, business objects in PRC family related to purchase orders and purchase agreements in folder `release-26C/aiapps/prc/purchasing`
+Added workflows, business objects in PRC family related to purchase orders and purchase agreements in folder `aiapps/prc/purchasing`
 
 - Workflows : Compliance Checklists, My Recent Requisitions, Purchase Agrements,Purchase Orders Purchase Order Status Distribution,Purchase Agreement Status Distribution
 - Business Objects : Compliance Checklist, Purchase Agreements, Purchase Orders, My Requisitions
 
-Updated workflows, business objects in cost-management to handle no data scenarios in folder `release-26C/aiapps/scm/cost-management`
+Updated workflows, business objects in cost-management to handle no data scenarios in folder `aiapps/scm/cost-management`
 - Workflows : Inventory Valuation Comparision Advisor, Period Validation Exceptions Advisor
 
-Updated succession planning agentic app and supporting workflow to fix bugs while adding potential successor in folder `release-26C/aiapps/hcm/succession-management`
+Updated succession planning agentic app and supporting workflow to fix bugs while adding potential successor in folder `aiapps/hcm/succession-management`
 - Application : Person Succession Readiness Workspace
 - Workflows : Succession Overview Advisor, Succession Overview Agent Team
 - Business Object : Direct Reports Context
 
 ##### 6th Aug 2026
 -----
-Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps in `release-26C/aistudio/bin/aistudio-skill.zip`, `release-26C/aistudio/bin/aistudio-extension.zip`
+Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps in `aistudio-skill.zip`, `aistudio-extension.zip`
 
 Fusion AI Studio ATLAS—the Agentic Testing and Lifecycle Automation Suite—enables teams to transform critical agent scenarios into repeatable, executable tests. Each test brings together an input, expected workflow behavior, representative replay data, and evaluation criteria to verify that agents continue to perform as intended as prompts, models, workflows, and environments evolve. By minimizing reliance on dynamic external data and manual result validation, ATLAS provides a reliable and consistent foundation for testing and validating agentic workflows throughout the development lifecycle.
 
@@ -153,16 +228,16 @@ ATLAS integrates seamlessly with local development and CI/CD workflows, enabling
 
 ##### 25th July 2026
 -----
-Updated skill in `release-26C/aistudio/bin/aistudio-skill.zip`, `release-26C/aistudio/bin/aistudio-extension.zip` to resolve authentication issues when connecting to the Fusion environment on the Windows platform
+Updated skill in `aistudio-skill.zip`, `aistudio-extension.zip` to resolve authentication issues when connecting to the Fusion environment on the Windows platform
 
-Added workflows, business objects in HCM family related to career development in folders `release-26C/aiapps/hcm/career-development`,`release-26C/aiapps/hcm/journeys`,`release-26C/aiapps/hcm/learning` 
+Added workflows, business objects in HCM family related to career development in folders `aiapps/hcm/career-development`,`aiapps/hcm/journeys`,`aiapps/hcm/learning` 
 
 - Workflows : My Career Development Tasks, My Current Learning, My Self Developing Skills
 - Business Objects : Career development skills lookup, Career Development Tasks, Learning Searches
 
 Updated descriptions and business object code reference in below workflows
--  `release-26C/aiapps/hcm/human-resources/xx_worker_card.wf` 
--  `release-26C/aiapps/hcm/absences/xx_team_upcoming_absences.wf`
+-  `aiapps/hcm/human-resources/xx_worker_card.wf` 
+-  `aiapps/hcm/absences/xx_team_upcoming_absences.wf`
 
 ## Contributing
 
